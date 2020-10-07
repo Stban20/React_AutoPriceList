@@ -33,7 +33,7 @@ const Result = ({ price }) => {
   ) : (
     <ContainerPrice>
       <TransitionGroup
-        component='p'
+        component='span'
         className='resultado'
       >
         <CSSTransition
@@ -42,7 +42,7 @@ const Result = ({ price }) => {
             timeout={{ enter: 500, exit: 500}}
         >
           <ContainerPharragrafTotal>
-            The Total is: ${price}
+            The Total is: $<span>{price}</span>
           </ContainerPharragrafTotal>
         </CSSTransition>
       </TransitionGroup>

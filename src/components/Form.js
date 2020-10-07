@@ -107,7 +107,7 @@ const Form = ({ setResume, setCharging }) => {
       //delete the spinner
       setCharging(false);
       setResume({
-        price: result,
+        price: Number(result),
         data,
       });
     }, 2000);
