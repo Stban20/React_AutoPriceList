@@ -32,14 +32,11 @@ const Result = ({ price }) => {
     </ContainerPharragrafMessage>
   ) : (
     <ContainerPrice>
-      <TransitionGroup
-        component='span'
-        className='resultado'
-      >
+      <TransitionGroup component="span" className="resultado">
         <CSSTransition
-            classNames='resultado'
-            key={price}
-            timeout={{ enter: 500, exit: 500}}
+          classNames="resultado"
+          key={price}
+          timeout={{ enter: 500, exit: 500 }}
         >
           <ContainerPharragrafTotal>
             The Total is: $<span>{price}</span>
@@ -51,7 +48,7 @@ const Result = ({ price }) => {
 };
 
 Result.propTypes = {
-    price: PropTypes.number.isRequired,
-  };
+  price: PropTypes.number.isRequired,
+};
 
 export default Result;
